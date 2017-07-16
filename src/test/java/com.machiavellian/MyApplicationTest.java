@@ -13,4 +13,10 @@ public class MyApplicationTest {
         Object result = myApplication.add(1, 1);
         assertEquals(result, 2);
     }
+
+    @Test
+    public void testMultiply() {
+        Object result = myApplication.multiply(2, 3);
+        assertEquals(result, 6);
+    }
 }
