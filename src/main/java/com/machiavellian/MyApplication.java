@@ -14,4 +14,8 @@ public class MyApplication  {
     public Integer multiply(Integer firstArg, Integer secondArg) {
         return firstArg * secondArg;
     }
+
+    public Integer divide(Integer firstArg, Integer secondArg) {
+        return firstArg / secondArg;
+    }
 }
