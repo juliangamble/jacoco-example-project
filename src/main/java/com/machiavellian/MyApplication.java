@@ -1,0 +1,15 @@
+package com.machiavellian;
+
+
+public class MyApplication  {
+
+	public Integer add(Integer firstArg, Integer secondArg) {
+		return firstArg + secondArg;
+	}
+
+    public Integer subtract(Integer firstArg, Integer secondArg) {
+        return firstArg - secondArg;
+    }
+
+
+}
