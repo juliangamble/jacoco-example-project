@@ -1,4 +1,3 @@
 .idea
-target/
-cobertura-example-project.iml
+jacoco-example-project.iml
 
