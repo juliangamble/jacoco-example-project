@@ -1,4 +1,4 @@
-##Output
+## Output - showing coverage per commit
 
 	----
 	Commit: caaa32f8c8eff580b4760f60dbf021d6e03935c3 - Sun Jul 16 20:48:50 AEST 2017 - Julian Gamble - [dev] first drop
@@ -37,11 +37,11 @@
 
 
 
-##Running
+## Running
 
-mvn clean test
+    mvn clean test
 
 
-##New Report
+## New Report File Location
 
     target/site/jacoco-ut/coverage-per-commit.txt
