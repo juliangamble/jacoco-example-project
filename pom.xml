@@ -55,6 +55,13 @@
 			                <outputDirectory>${project.reporting.outputDirectory}/jacoco-ut</outputDirectory>
 			            </configuration>
 			        </execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.machiavellian</groupId>
+				<artifactId>commit-level-coverage-report</artifactId>
+				<version>1.0</version>
+				<executions>
 			        <execution>
 			            <id>post-unit-test2</id>
 			            <phase>test</phase>
@@ -66,7 +73,7 @@
 			                <dataFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</dataFile>
 			                <!-- Sets the output directory for the code coverage report. -->
 			                <outputDirectory>${project.reporting.outputDirectory}/jacoco-ut</outputDirectory>
-			                <daysBackToCheck>100</daysBackToCheck>
+			                <daysBackToCheck>1000</daysBackToCheck>
 			            </configuration>
 			        </execution>
 			    </executions>

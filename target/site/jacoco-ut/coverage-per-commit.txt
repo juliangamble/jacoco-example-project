@@ -32,3 +32,24 @@ Lines not covered: 1
 src/main/java/com/machiavellian/MyApplication.java:19         return firstArg / secondArg;
 
 ----
+Commit: 2e3b9ff74618bce706a83893523b96e439ddf2ff - Wed Aug 23 20:49:53 AEST 2017 - Julian Gamble - [dev] example project showing coverage reporting at a commit level
+
+Intersection of line changes with coverage (lines we care about): 0
+covered lines: 0
+Coverage for commit: 0%
+Lines not covered: 0
+----
+Commit: e0810f97e1ca32e33177b7b21967aa80686d458e - Wed Aug 23 20:54:21 AEST 2017 - Julian Gamble - [dev] adding reporting results
+
+Intersection of line changes with coverage (lines we care about): 0
+covered lines: 0
+Coverage for commit: 0%
+Lines not covered: 0
+----
+Commit: 6a6dbd7feebef1e64ea9a793591b808f99517e97 - Wed Aug 23 20:56:16 AEST 2017 - Julian Gamble - [dev] adding formatting
+
+Intersection of line changes with coverage (lines we care about): 0
+covered lines: 0
+Coverage for commit: 0%
+Lines not covered: 0
+----
