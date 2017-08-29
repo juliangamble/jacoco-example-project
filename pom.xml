@@ -58,7 +58,7 @@
 				</executions>
 			</plugin>
 			<plugin>
-				<groupId>org.machiavellian</groupId>
+				<groupId>com.github.juliangamble</groupId>
 				<artifactId>commit-level-coverage-report</artifactId>
 				<version>1.0</version>
 				<executions>
@@ -69,11 +69,11 @@
 			                <goal>report-on-commit-coverage</goal>
 			            </goals>
 			            <configuration>
-			                <!-- Sets the path to the file which contains the execution data. -->
-			                <dataFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</dataFile>
+			                <!-- Optional Sets the path to the file which contains the execution data. -->
+			                <!-- <dataFile>${project.build.directory}/coverage-reports/jacoco-ut.exec</dataFile> -->
 			                <!-- Sets the output directory for the code coverage report. -->
 			                <outputDirectory>${project.reporting.outputDirectory}/jacoco-ut</outputDirectory>
-			                <daysBackToCheck>1000</daysBackToCheck>
+			                <daysBackToCheck>100</daysBackToCheck>
 			            </configuration>
 			        </execution>
 			    </executions>

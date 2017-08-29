@@ -1,3 +1,66 @@
+# Original Plugin
+
+This is an example of the plugin here: https://github.com/juliangamble/commit-level-coverage-report
+
+
+# About
+
+This project enables commit-level coverage reporting.
+
+# Why you would use this
+
+
+[Workplace with a million line codebase and 100s of developers working on it.]
+
+Tech Lead: "We really want to get the coverage up on this codebase - more tests will give us more feedback about the code."
+Developer: "Well that's lovely, but I really need to ship my feature - I'll make sure my stuff is covered as best I can."
+Tech Lead: "Ok - how much coverage are you aiming for?"
+Developer: "I'll make sure the lines I touch have coverage."
+Tech Lead: "Ok - how will you measure that?"
+....
+
+Now obviously (a) this codebase is a candidate for modularisation and (b) sonar does give you feedback on coverage at a commit level - but sonar doesn't give you a way to know what the commit-level coverage is prior to pushing your changes. ie - if you've missed some coverage on the lines you've changed - there isn't a way to know before pushing.
+
+This change is trying to solve the problem of knowing "for the lines I have touched - what coverage have I got? What lines have I missed?"
+
+
+# How to setup and use in your project
+
+Add the following into your `pom.xml`
+
+    <project>
+        <build>
+            <plugins>
+                <plugin>
+                    <groupId>com.github.juliangamble</groupId>
+                    <artifactId>commit-level-coverage-report</artifactId>
+                    <version>1.0</version>
+                    <executions>
+                        <execution>
+                            <id>post-unit-test2</id>
+                            <phase>test</phase>
+                            <goals>
+                                <goal>report-on-commit-coverage</goal>
+                            </goals>
+                            <configuration>
+                                <!-- Optional - sets the path to the file which contains the execution data. -->
+                                <!-- <dataFile>${project.build.directory}/coverage-reports/jacoco.exec</dataFile> -->
+                                <!-- Sets the output directory for the code coverage report. -->
+                                <outputDirectory>${project.reporting.outputDirectory}/</outputDirectory>
+                                <daysBackToCheck>100</daysBackToCheck>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </build>
+    </project>
+
+
+Then run this:
+
+    mvn clean test
+
 ## Output - showing coverage per commit
 
 	----
